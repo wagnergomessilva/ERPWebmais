@@ -6,8 +6,8 @@ import pages.BaseTest;
 
 public class EstoqueInicial extends BaseTest {
 
-    int qtdeItens = 1530;
-    String qtdeEntradaItem = "100.000,000";
+    int qtdeItens = 30;
+    String qtdeEntradaItem = "100.000,00";
 
     @BeforeMethod
     public void setup() {
@@ -25,7 +25,7 @@ public class EstoqueInicial extends BaseTest {
         EstoqueInicial.validarAlertaSalvoComSucesso();
 
         //adiciona itens no estoque inicial
-        int ContadorCodigoProtudo = 0;
+        int ContadorCodigoProtudo = 1500;
         for (int i = 0; i < qtdeItens; i++) {
             EstoqueInicial.setProduto(""+(ContadorCodigoProtudo = ContadorCodigoProtudo + 1));
             EstoqueInicial.setElementoCustoItem("1");

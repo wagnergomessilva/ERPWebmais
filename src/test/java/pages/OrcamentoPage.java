@@ -26,8 +26,12 @@ public class OrcamentoPage extends BasePage{
         inserirQuantidade("ociquantidade", qtde);
     }
 
-    public void setValorUnitarioProduto(String valorUnitario) {
-        inserirValor("ociprecunit", valorUnitario);
+    public void setQuantidadeProdutoRandom() {
+        inserirQuantidade("ociquantidade", geraQuantidadeItem());
+    }
+
+    public void setValorUnitarioProduto() {
+        inserirValor("ociprecunit", geraValorUnitarioItem());
     }
 
     public void clicarBotaoAdicionarItemOrcamento() {

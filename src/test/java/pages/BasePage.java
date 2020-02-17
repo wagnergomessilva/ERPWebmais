@@ -74,4 +74,24 @@ public class BasePage {
         return numeroFormatado;
     }
 
+    public String geraQuantidadeItem() {
+
+        Random r = new Random();
+        double  numero = r.nextFloat()*10;
+
+        DecimalFormat df = new DecimalFormat("0.##");
+        String numeroFormatado = df.format(numero);
+        return numeroFormatado;
+    }
+
+    public String geraValorUnitarioItem() {
+
+        Random r = new Random();
+        double  numero = r.nextFloat()*1000;
+
+        DecimalFormat df = new DecimalFormat("0.##");
+        String numeroFormatado = df.format(numero);
+        return numeroFormatado;
+    }
+
 }

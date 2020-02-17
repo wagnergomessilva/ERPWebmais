@@ -14,7 +14,7 @@ public class BaseTest {
     @BeforeMethod
     public void start() {
         Configuration.browser = "chrome";
-        Configuration.baseUrl = "https://test.webmaissistemas.com.br/csp/wagner/system/www/index.csp?lf=1";
+        Configuration.baseUrl = "https://test.webmaissistemas.com.br/csp/geizy/system/www/index.csp?lf=1";
 
         Login = new LoginPage();
         Menu = new MenuPage();

@@ -13,8 +13,8 @@ public class Orcamento extends BaseTest {
     String valorSeguro          = "56,57";
     String valorDespesas        = "158,12";
 
-    String qtdeItemOrcamento    = "5,55";
-    String valorUnitario        = "22,75";
+   // String qtdeItemOrcamento    = "5,55";
+    //String valorUnitario        = "22,75";
 
     @BeforeMethod
     public void setup() {
@@ -26,7 +26,7 @@ public class Orcamento extends BaseTest {
     public void cadastrarOrcamento() {
         Menu.acessaTelaOrcamento();
         Orcamento.alternarTelaOrcamento();
-        Orcamento.setCodigoCliente("1182");
+        Orcamento.setCodigoCliente("1325");
         Orcamento.clicarAbaValoresAdicionais();
         Orcamento.setFrete(valorFrete);
         Orcamento.setSeguro(valorSeguro);
@@ -36,8 +36,8 @@ public class Orcamento extends BaseTest {
         int ContadorCodigoProtudo = 0;
         for (int i = 0; i < qtdeItens; i++) {
             Orcamento.setProduto("+" + (ContadorCodigoProtudo = ContadorCodigoProtudo + 1));
-            Orcamento.setQuantidadeProduto(qtdeItemOrcamento);
-            Orcamento.setValorUnitarioProduto(valorUnitario);
+            Orcamento.setQuantidadeProdutoRandom();
+            Orcamento.setValorUnitarioProduto();
             Orcamento.clicarBotaoAdicionarItemOrcamento();
             Orcamento.esperaFixa(300);
         }

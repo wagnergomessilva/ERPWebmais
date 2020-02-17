@@ -36,8 +36,12 @@ public class PedidoVendaPage extends BasePage{
         inserirQuantidade("pdiquantidade", qtde);
     }
 
-    public void setValorUnitarioProduto(String valorUnitario) {
-        inserirValor("pdiprecouni", valorUnitario);
+    public void setQuantidadeProdutoRandom() {
+        inserirQuantidade("pdiquantidade", geraQuantidadeItem());
+    }
+
+    public void setValorUnitarioProduto() {
+        inserirValor("pdiprecouni", geraValorUnitarioItem());
     }
 
     public void setFrete(String valorFrete) {
