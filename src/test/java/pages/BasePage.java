@@ -77,7 +77,7 @@ public class BasePage {
     public String geraQuantidadeItem() {
 
         Random r = new Random();
-        double  numero = r.nextFloat()*10;
+        double  numero = 10 + r.nextFloat()*10;
 
         DecimalFormat df = new DecimalFormat("0.##");
         String numeroFormatado = df.format(numero);
