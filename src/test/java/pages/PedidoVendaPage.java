@@ -40,7 +40,11 @@ public class PedidoVendaPage extends BasePage{
         inserirQuantidade("pdiquantidade", geraQuantidadeItem());
     }
 
-    public void setValorUnitarioProduto() {
+    public void setValorUnitarioProduto(String valor) {
+        inserirValor("pdiprecouni", valor);
+    }
+
+    public void setValorUnitarioProdutoRandom() {
         inserirValor("pdiprecouni", geraValorUnitarioItem());
     }
 

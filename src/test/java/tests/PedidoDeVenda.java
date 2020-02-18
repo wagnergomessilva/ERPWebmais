@@ -6,19 +6,19 @@ import pages.BaseTest;
 
 public class PedidoDeVenda extends BaseTest {
 
-    int qtdeItens           = 10; //Quantidade de itens do pedido de venda
+    int qtdeItens           = 20; //Quantidade de itens do pedido de venda
 
     //valores da aba cadastro
-    String valorFrete       = "125,00";
-    String valorSeguro      = "35,00";
-    String valorDespesas    = "55,00";
-    String valorDescInc     = "12,50";
-    String valorDescCon     = "5,55";
+    String valorFrete       = "125,59";
+    String valorSeguro      = "35,26";
+    String valorDespesas    = "55,12";
+    String valorDescInc     = "12,57";
+    String valorDescCon     = "2,07";
 
     //Valores da aba itens de venda
     String redPrecoVenda    = "0,00";
-    //String qtdeItemPedido   = "13,59";
-    //String valorUnitario    = "123,85";
+    String qtdeItemPedido   = "13,59";
+    String valorUnitario    = "123,85";
 
     @BeforeMethod
     public void setup() {
@@ -31,7 +31,7 @@ public class PedidoDeVenda extends BaseTest {
         Menu.acessaTelaPedidoDevenda();
         Pedido.alternarTelaPedidoDeVenda();
         Pedido.clicarBotaoNovoPedido();
-        Pedido.setCodigoCliente("1325");
+        Pedido.setCodigoCliente("1182");
         Pedido.clicarAbaValoresAdicionais();
         Pedido.setFrete(valorFrete);
         Pedido.setSeguro(valorSeguro);
@@ -48,9 +48,9 @@ public class PedidoDeVenda extends BaseTest {
             Pedido.setProduto("+"+(ContadorCodigoProtudo = ContadorCodigoProtudo + 1));
             Pedido.esperaFixa(300);
             Pedido.setRedPrecoVenda(redPrecoVenda);
-            Pedido.setQuantidadeProdutoRandom();
+            Pedido.setQuantidadeProduto(qtdeItemPedido);
             Pedido.esperaFixa(300);
-            Pedido.setValorUnitarioProduto();
+            Pedido.setValorUnitarioProduto(valorUnitario);
             Pedido.esperaFixa(300);
             Pedido.clicarBotaAdicionarItemPedido();
             Pedido.esperaFixa(300);
