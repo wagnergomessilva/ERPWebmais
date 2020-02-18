@@ -49,7 +49,8 @@ public class BasePage {
 
    public void inserirCodigoProduto( String codigoProduto){
         $(byText("Inicie com '+' para buscar pelo código")).click();
-        $("input[type=search]").setValue(codigoProduto).sendKeys(Keys.TAB, Keys.TAB);
+        esperaFixa(1000);
+        $("input[type=search]").setValue(codigoProduto).sendKeys(Keys.ENTER);
     }
 
     public void inserirQuantidade(String id_campo, String qtde){
@@ -57,7 +58,7 @@ public class BasePage {
     }
 
     public void inserirValor(String id_campo, String valor){
-        $("#" + id_campo).setValue(valor).sendKeys(Keys.TAB);
+        $("#" + id_campo).setValue(valor);
     }
 
     public void esperaFixa(int tempoMilesegundos) {

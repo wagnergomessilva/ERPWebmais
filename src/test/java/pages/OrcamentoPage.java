@@ -44,6 +44,7 @@ public class OrcamentoPage extends BasePage{
 
     public void clicarBotaoAdicionarItemOrcamento() {
         clicarBotaoId("btnSaveItem");
+        esperaFixa(500);
     }
 
     public void clicarAbaValoresAdicionais() {
