@@ -47,6 +47,10 @@ public class BasePage {
         $("#" + id).click();
     }
 
+    public void clicarCkeckBoxID(String id) {
+        $("#" + id).click();
+    }
+
    public void inserirCodigoProduto( String codigoProduto){
         $(byText("Inicie com '+' para buscar pelo código")).click();
         esperaFixa(1000);

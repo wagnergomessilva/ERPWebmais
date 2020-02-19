@@ -10,6 +10,7 @@ public class BaseTest {
     protected static PedidoVendaPage Pedido;
     protected static OrcamentoPage Orcamento;
     protected static EstoqueInicialPage EstoqueInicial;
+    protected static TabelaPrecoPage TabelaPreco;
 
     @BeforeMethod
     public void start() {
@@ -24,5 +25,6 @@ public class BaseTest {
         Pedido = new PedidoVendaPage();
         Orcamento = new OrcamentoPage();
         EstoqueInicial = new EstoqueInicialPage();
+        TabelaPreco =  new TabelaPrecoPage();
     }
 }

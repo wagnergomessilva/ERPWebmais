@@ -6,7 +6,7 @@ import pages.BaseTest;
 
 public class Orcamento extends BaseTest {
 
-    int qtdeItens = 10; //Quantidade de itens do orçamento
+    int qtdeItens = 30; //Quantidade de itens do orçamento
 
     //valores da aba cadastro
     String valorFrete           = "458,97";

@@ -19,4 +19,10 @@ public class MenuPage extends BasePage{
         escrever("inputCaixaPesquisa", "MT034");
         clicarNoResultadoDaPesquisa("preresultadoPesquisa");
     }
+
+    public void acessarTelaTabelaPreco() {
+        buscaTelasSistemaClicar("iconeNavFerramentaPesquisa");
+        escrever("inputCaixaPesquisa", "ss108");
+        clicarNoResultadoDaPesquisa("preresultadoPesquisa");
+    }
 }
