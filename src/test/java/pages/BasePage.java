@@ -64,6 +64,9 @@ public class BasePage {
     public void inserirValor(String id_campo, String valor){
         $("#" + id_campo).setValue(valor);
     }
+    public void selecionarComboBox(String id_campo, String valor){
+        $("#" + id_campo).selectOptionByValue(valor);
+    }
 
     public void esperaFixa(int tempoMilesegundos) {
         sleep(tempoMilesegundos);

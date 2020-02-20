@@ -37,6 +37,13 @@ public class OrcamentoPage extends BasePage{
     public void setvalorUnitario(String valor) {
         inserirValor("ociprecunit", valor);
     }
+    public void selecionaComboDescontoEmPercentual(){
+        selecionarComboBox("ociformadesc", "1");
+    }
+
+    public void setDescontoUnitarioPerc(String valor) {
+        inserirValor("ocidescontounit", valor);
+    }
 
     public void setRedPrecoVenda(String valor) {
         inserirValor("ociredpvariavel", valor);

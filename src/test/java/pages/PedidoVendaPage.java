@@ -44,6 +44,18 @@ public class PedidoVendaPage extends BasePage{
         inserirValor("pdiprecouni", valor);
     }
 
+    public void setAcrescimoUnitarioFrete(String valor) {
+        inserirValor("pdiacrescimounifrete", valor);
+    }
+
+    public void setDescontoEmReais(String valor) {
+        inserirValor("pdidescontors", valor);
+    }
+
+    public void setDescontoEmPercentual(String valor) {
+        inserirValor("pdidesconto", valor);
+    }
+
     public void setValorUnitarioProdutoRandom() {
         inserirValor("pdiprecouni", geraValorUnitarioItem());
     }

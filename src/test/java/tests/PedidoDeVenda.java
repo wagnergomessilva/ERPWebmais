@@ -6,7 +6,7 @@ import pages.BaseTest;
 
 public class PedidoDeVenda extends BaseTest {
 
-    int qtdeItens           = 20; //Quantidade de itens do pedido de venda
+    int qtdeItens           = 10; //Quantidade de itens do pedido de venda
 
     //valores da aba cadastro
     String valorFrete       = "125,59";
@@ -15,10 +15,13 @@ public class PedidoDeVenda extends BaseTest {
     String valorDescInc     = "12,57";
     String valorDescCon     = "2,07";
 
-    //Valores da aba itens de venda
+    //valores da aba itens de venda
     String redPrecoVenda    = "0,00";
     String qtdeItemPedido   = "13,59";
     String valorUnitario    = "123,85";
+    String acresUnitFrete   = "2,50";
+    String descUnitReais    = "3,49";
+    String descUnitPerc    = "12,50";
 
     @BeforeMethod
     public void setup() {
@@ -51,6 +54,9 @@ public class PedidoDeVenda extends BaseTest {
             Pedido.setQuantidadeProduto(qtdeItemPedido);
             Pedido.esperaFixa(300);
             Pedido.setValorUnitarioProduto(valorUnitario);
+            Pedido.setAcrescimoUnitarioFrete(acresUnitFrete);
+            Pedido.setDescontoEmReais(descUnitReais);
+            Pedido.setDescontoEmPercentual(descUnitPerc);
             Pedido.esperaFixa(300);
             Pedido.clicarBotaAdicionarItemPedido();
             Pedido.esperaFixa(300);
