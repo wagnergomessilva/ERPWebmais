@@ -28,8 +28,8 @@ public class PedidoVendaPage extends BasePage{
         clicarAba("aba3");
     }
 
-    public void setProduto(String codigoProduto) {
-        inserirCodigoProduto(codigoProduto);
+    public void setProdutoPedido(String codigoProduto, String contador) {
+        inserirCodigoProdutoPedido(codigoProduto, contador);
     }
 
     public void setQuantidadeProduto(String qtde) {

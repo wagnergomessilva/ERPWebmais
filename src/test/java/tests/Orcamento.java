@@ -1,12 +1,13 @@
 package tests;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.BaseTest;
+
+//https://www.devmedia.com.br/api-selenide-desenvolvimento-de-testes-funcionais-em-java/33680
 
 public class Orcamento extends BaseTest {
 
-    int qtdeItens = 10; //Quantidade de itens do orçamento
+    int qtdeItens = 500; //Quantidade de itens do orçamento
 
     //valores da aba cadastro
     String valorFrete           = "458,97";
@@ -19,6 +20,7 @@ public class Orcamento extends BaseTest {
     String redPrecoVenda        = "0,00";
     String descUnitarioPerc     = "15,00";
 
+
     @BeforeMethod
     public void setup() {
         Login.open();
@@ -29,7 +31,7 @@ public class Orcamento extends BaseTest {
     public void cadastrarOrcamento() {
         Menu.acessaTelaOrcamento();
         Orcamento.alternarTelaOrcamento();
-        Orcamento.setCodigoCliente("1182");
+        Orcamento.setCodigoCliente("1325");
         Orcamento.clicarAbaValoresAdicionais();
         Orcamento.setFrete(valorFrete);
         Orcamento.setSeguro(valorSeguro);
@@ -38,7 +40,7 @@ public class Orcamento extends BaseTest {
 
         int ContadorCodigoProtudo = 0;
         for (int i = 0; i < qtdeItens; i++) {
-            Orcamento.setProduto("+" + (ContadorCodigoProtudo = ContadorCodigoProtudo + 1));
+            Orcamento.setProdutoOrcamento("+" + (ContadorCodigoProtudo = ContadorCodigoProtudo + 1), ""+i);
             Orcamento.setRedPrecoVenda(redPrecoVenda);
             Orcamento.setQuantidadeProduto(qtdeItemOrcamento);
             //Orcamento.setQuantidadeProdutoRandom();
@@ -48,5 +50,7 @@ public class Orcamento extends BaseTest {
             Orcamento.setDescontoUnitarioPerc(descUnitarioPerc);
             Orcamento.clicarBotaoAdicionarItemOrcamento();
         }
+
     }
+
 }

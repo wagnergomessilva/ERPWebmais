@@ -17,7 +17,7 @@ public class BaseTest {
         Configuration.browser = "chrome";
         Configuration.startMaximized = true;
         //Configuration.browser = "firefox";
-        Configuration.baseUrl = "https://test.webmaissistemas.com.br/csp/wagner/system/www/index.csp?lf=1";
+        Configuration.baseUrl = "https://test.webmaissistemas.com.br/csp/geizy/system/www/index.csp?lf=1";
 
 
         Login = new LoginPage();

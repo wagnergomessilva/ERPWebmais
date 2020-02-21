@@ -1,6 +1,9 @@
 package pages;
 
 import static com.codeborne.selenide.Selectors.byText;
+
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.conditions.Value;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 
@@ -51,11 +54,31 @@ public class BasePage {
         $("#" + id).click();
     }
 
-   public void inserirCodigoProduto( String codigoProduto){
+   public void inserirCodigoProdutoOrcamento( String codigoProduto, String contadaor){
+        getWebDriver().switchTo().frame("centro2");
+        $("#numRegistro").should(Condition.textCaseSensitive(contadaor));
+        getWebDriver().switchTo().defaultContent();
         $(byText("Inicie com '+' para buscar pelo código")).click();
-        esperaFixa(1000);
-        $("input[type=search]").setValue(codigoProduto).sendKeys(Keys.ENTER);
+        //esperaFixa(1000);
+        $("input[type=search]").setValue(codigoProduto);
+        $("input[type=search]").sendKeys(Keys.ENTER);
     }
+
+    public void inserirCodigoProdutoPedido( String codigoProduto, String contadaor){
+        getWebDriver().switchTo().frame("centro");
+        $("#numRegistro").should(Condition.textCaseSensitive(contadaor));
+        getWebDriver().switchTo().defaultContent();
+        $(byText("Inicie com '+' para buscar pelo código")).click();
+        //esperaFixa(1000);
+        $("input[type=search]").setValue(codigoProduto);
+        $("input[type=search]").sendKeys(Keys.ENTER);
+    }
+
+    /*public void trocarFocoParaIframe(String idIframe) {
+        getWebDriver().switchTo().frame(idIframe);
+        System.out.println($("#numRegistro").text());
+    }*/
+
 
     public void inserirQuantidade(String id_campo, String qtde){
         $("#" + id_campo).setValue(qtde).sendKeys(Keys.TAB);

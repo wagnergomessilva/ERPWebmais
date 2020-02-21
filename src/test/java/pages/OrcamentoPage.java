@@ -18,8 +18,8 @@ public class OrcamentoPage extends BasePage{
         clicarAba("#itens");
     }
 
-    public void setProduto(String codigoProduto) {
-        inserirCodigoProduto(codigoProduto);
+    public void setProdutoOrcamento(String codigoProduto, String contador) {
+        inserirCodigoProdutoOrcamento(codigoProduto, contador);
     }
 
     public void setQuantidadeProduto(String qtde) {

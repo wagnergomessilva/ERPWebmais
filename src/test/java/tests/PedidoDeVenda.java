@@ -6,7 +6,7 @@ import pages.BaseTest;
 
 public class PedidoDeVenda extends BaseTest {
 
-    int qtdeItens           = 10; //Quantidade de itens do pedido de venda
+    int qtdeItens           = 500; //Quantidade de itens do pedido de venda
 
     //valores da aba cadastro
     String valorFrete       = "125,59";
@@ -34,7 +34,7 @@ public class PedidoDeVenda extends BaseTest {
         Menu.acessaTelaPedidoDevenda();
         Pedido.alternarTelaPedidoDeVenda();
         Pedido.clicarBotaoNovoPedido();
-        Pedido.setCodigoCliente("1182");
+        Pedido.setCodigoCliente("1325");
         Pedido.clicarAbaValoresAdicionais();
         Pedido.setFrete(valorFrete);
         Pedido.setSeguro(valorSeguro);
@@ -48,7 +48,7 @@ public class PedidoDeVenda extends BaseTest {
         Pedido.clicarAbaItensDeVenda();
         int ContadorCodigoProtudo = 0;
         for (int i = 0; i < qtdeItens; i++) {
-            Pedido.setProduto("+"+(ContadorCodigoProtudo = ContadorCodigoProtudo + 1));
+            Pedido.setProdutoPedido("+"+(ContadorCodigoProtudo = ContadorCodigoProtudo + 1), ""+i);
             Pedido.esperaFixa(300);
             Pedido.setRedPrecoVenda(redPrecoVenda);
             Pedido.setQuantidadeProduto(qtdeItemPedido);
